@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>WICU Mobile Banking Application</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <meta charset="utf-8">
+		<link href="mobile-3.css" rel="stylesheet" type="text/css" media="all">
+         <style type="text/css">
+        body {width: 100%;
+        height: 100%;
+        }
+        </style>
+
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript">
+       
+        function onBodyLoad()
+        {       
+            document.addEventListener("deviceready", onDeviceReady, false);
+    
+        }
+
+        function onDeviceReady()
+        {
+            // do your thing!
+            var ref = window.open('http://70.61.212.124:8084/', '_self', 'location=yes');
+         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+         ref.addEventListener('exit', function() { alert(event.type); });
+        
+         
+        }
+
+        </script>
+    </head>
+    <body onload="onBodyLoad()" class="splash" style="background-repeat: no-repeat; background-size:cover">
+    
+    <script type="text/javascript">
+        navigator.app.loadUrl("http://70.61.212.124:8084/");
+    </script>
+    </body>
+</html>
