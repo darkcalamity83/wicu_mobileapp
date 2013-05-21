@@ -32,6 +32,7 @@ img, object, embed, video {
   
   .splash {
   background-image: url('wicu_mobilesplash.png');
+  height: 100%;
 	
   }
   
